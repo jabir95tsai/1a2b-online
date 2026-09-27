@@ -1,0 +1,160 @@
+{
+  "note": "擷取實際公開 game 欄位，省略房碼與身分相關外層欄位。",
+  "racePending": {
+    "phase": "playing",
+    "round": 1,
+    "deadline": 1790483536015,
+    "result": null,
+    "firstPlayer": null,
+    "turn": null,
+    "answerReady": [
+      true,
+      true
+    ],
+    "canSetAnswer": false,
+    "canGuess": false,
+    "myPending": "0123",
+    "myHistory": [],
+    "opponentSteps": 0
+  },
+  "raceOpponent": {
+    "phase": "playing",
+    "round": 1,
+    "deadline": 1790483536015,
+    "result": null,
+    "firstPlayer": null,
+    "turn": null,
+    "answerReady": [
+      true,
+      true
+    ],
+    "canSetAnswer": false,
+    "canGuess": true,
+    "myPending": null,
+    "myHistory": [],
+    "opponentSteps": 1
+  },
+  "raceFinished": {
+    "phase": "finished",
+    "round": 6,
+    "deadline": null,
+    "result": {
+      "winner": null,
+      "reason": "draw"
+    },
+    "firstPlayer": null,
+    "turn": null,
+    "answerReady": [
+      true,
+      true
+    ],
+    "canSetAnswer": false,
+    "canGuess": false,
+    "myPending": null,
+    "myHistory": [
+      {
+        "round": 1,
+        "guess": "0123",
+        "feedback": {
+          "a": 2,
+          "b": 0
+        }
+      },
+      {
+        "round": 2,
+        "guess": "0145",
+        "feedback": {
+          "a": 1,
+          "b": 1
+        }
+      },
+      {
+        "round": 3,
+        "guess": "0426",
+        "feedback": {
+          "a": 2,
+          "b": 1
+        }
+      },
+      {
+        "round": 4,
+        "guess": "0724",
+        "feedback": {
+          "a": 3,
+          "b": 0
+        }
+      },
+      {
+        "round": 5,
+        "guess": "0824",
+        "feedback": {
+          "a": 3,
+          "b": 0
+        }
+      },
+      {
+        "round": 6,
+        "guess": "0924",
+        "feedback": {
+          "a": 4,
+          "b": 0
+        }
+      }
+    ],
+    "opponentSteps": 6,
+    "opponentHistory": [
+      {
+        "round": 1,
+        "guess": "0123",
+        "feedback": {
+          "a": 2,
+          "b": 0
+        }
+      },
+      {
+        "round": 2,
+        "guess": "0145",
+        "feedback": {
+          "a": 1,
+          "b": 1
+        }
+      },
+      {
+        "round": 3,
+        "guess": "0426",
+        "feedback": {
+          "a": 2,
+          "b": 1
+        }
+      },
+      {
+        "round": 4,
+        "guess": "0724",
+        "feedback": {
+          "a": 3,
+          "b": 0
+        }
+      },
+      {
+        "round": 5,
+        "guess": "0824",
+        "feedback": {
+          "a": 3,
+          "b": 0
+        }
+      },
+      {
+        "round": 6,
+        "guess": "0924",
+        "feedback": {
+          "a": 4,
+          "b": 0
+        }
+      }
+    ],
+    "answers": [
+      "0924",
+      "0924"
+    ]
+  }
+}

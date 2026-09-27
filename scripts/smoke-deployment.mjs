@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import { gzipSync } from 'node:zlib';
+import assert from 'node:assert/strict';
+const base=process.env.E2E_BASE_URL??'http://127.0.0.1:8787';
+const result={base,checkedAt:new Date().toISOString(),checks:[]};
+const home=await fetch(base);assert.equal(home.status,200);assert(home.headers.get('content-security-policy')?.includes("script-src 'self'"));assert.equal(home.headers.get('referrer-policy'),'no-referrer');result.checks.push('Static Assets 200、CSP、Referrer-Policy');
+const health=await fetch(base+'/api/health');assert.deepEqual(await health.json(),{ok:true,version:'1.0.0'});assert.equal(health.headers.get('cache-control'),'no-store');result.checks.push('API health 200、no-store');
+const rejected=await fetch(base+'/api/session',{method:'POST',headers:{Origin:'https://untrusted.example','Content-Type':'application/json'},body:'{}'});assert.equal(rejected.status,403);result.checks.push('跨站 session 寫入拒絕');
+for(const path of ['/src/server/index.ts','/.dev.vars','/reports/solver-traces.csv']){const response=await fetch(base+path);assert.equal(response.status,404);}result.checks.push('原始碼、secret 檔名、solver 報告皆不公開');
+result.assets=fs.readdirSync('dist/client/assets').map(name=>{const body=fs.readFileSync('dist/client/assets/'+name);return {name,bytes:body.length,gzipBytes:gzipSync(body).length};});
+fs.writeFileSync(base.startsWith('http://127.0.0.1')?'reports/local-smoke.json':'reports/production-smoke.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

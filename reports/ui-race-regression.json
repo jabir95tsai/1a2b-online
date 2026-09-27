@@ -1,0 +1,6 @@
+{
+  "base": "http://127.0.0.1:8787",
+  "checkedAt": "2026-09-12T12:21:50.122Z",
+  "ok": true,
+  "scenario": "HTTP set-answer response delayed 2000ms after WebSocket; next input locked until completion; typed guess preserved"
+}

@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-12T11:21:53.535Z",
+  "transport": "loopback HTTP → Wrangler/workerd → SQLite Durable Object",
+  "requests": 16,
+  "modeA": "one-attempt terminal score verified",
+  "honestMode": {
+    "steps": 8,
+    "outcome": "solved"
+  },
+  "oralMode": "contradiction rejected; persisted public view unchanged",
+  "privacy": "no private state fields or premature answer field in checked responses",
+  "latencyMs": {
+    "max": 146.9374,
+    "mean": 43.12422499999999
+  },
+  "note": "Local HTTP only; no Cloudflare deployment or browser UI. Cookie, player ID and game IDs intentionally omitted."
+}

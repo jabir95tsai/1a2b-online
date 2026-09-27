@@ -1,0 +1,2 @@
+# Generate a private local value with npm run setup:local. Never deploy this placeholder.
+AUTH_SECRET=REPLACE_WITH_64_RANDOM_HEX_CHARACTERS

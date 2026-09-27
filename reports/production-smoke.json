@@ -1,0 +1,22 @@
+{
+  "base": "https://1a2b-online.jabir95tsai.workers.dev",
+  "checkedAt": "2026-09-12T12:26:04.714Z",
+  "checks": [
+    "Static Assets 200、CSP、Referrer-Policy",
+    "API health 200、no-store",
+    "跨站 session 寫入拒絕",
+    "原始碼、secret 檔名、solver 報告皆不公開"
+  ],
+  "assets": [
+    {
+      "name": "index-CdgKIaCF.css",
+      "bytes": 5668,
+      "gzipBytes": 1959
+    },
+    {
+      "name": "index-CFqisG2z.js",
+      "bytes": 13774,
+      "gzipBytes": 6041
+    }
+  ]
+}
